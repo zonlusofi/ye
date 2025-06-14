@@ -1,0 +1,26 @@
+.letter {
+  position: relative;
+  background-color: #FFFCEA; /* paper color */
+  width: 340px;
+  height: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* soft shadow only */
+  margin-bottom: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0; /* no rounded corners */
+  border: none; /* NO frame */
+}
+
+/* folded corner */
+.letter::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #FFFCEA 50%, #f3f3a1 50%);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
